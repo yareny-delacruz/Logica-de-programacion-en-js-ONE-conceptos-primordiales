@@ -1,0 +1,27 @@
+<meta charset="UTF-8">
+<h1>Calcular tabla de multiplicar</h1>
+<script>
+
+    function saltarLinea() {
+        document.write("<br><br>");
+    }
+    function imprimir(frase) {
+        document.write('<big>' + frase + '</big>');
+        saltarLinea();
+    }
+    var multiplicador=1;
+    imprimir("uso de while");
+    while(multiplicador <= 10){
+        imprimir(`5 * ${multiplicador} = ${5 * multiplicador}`);
+        multiplicador++; //=multiplicador=multiplicador+1;
+    }
+    imprimir("listo!");
+    imprimir("uso de for");
+    imprimir("for(inicializar variable; condición; adicion o sustracción de la variable para la siguiente iteración){ <br> }");
+    imprimir("for(var multiplicador = 1; multiplicador <= 10; multiplicador++){");
+    imprimir("\timprimir(`5 * ${multiplicador} = ${5 * multiplicador}`); <br>}");
+    for(var multiplicador = 1; multiplicador <= 10; multiplicador++){
+        imprimir(`5 * ${multiplicador} = ${5 * multiplicador}`);
+    }
+    imprimir("listo!");
+</script>

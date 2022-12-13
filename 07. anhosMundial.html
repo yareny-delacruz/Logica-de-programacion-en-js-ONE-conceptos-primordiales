@@ -1,0 +1,25 @@
+<meta charset="UTF-8">
+<h1>¿En qué años hubo mundial de Fútbol?</h1>
+<script>
+
+    function saltarLinea() {
+        document.write("<br><br>");
+    }
+    function imprimir(frase) {
+        document.write('<big>' + frase + '</big>');
+        saltarLinea();
+    }
+    var anhoMundial=1930;
+    var limite=parseInt(prompt("ingrese el año límite para calcular: "))
+    /*alert("Hubo mundial de FIFA en el año " + anhoMundial);
+    var anhoMundial=1930 + 4;
+    alert("Hubo mundial de FIFA en el año " + anhoMundial);
+    ...*/
+    //loops, son iteraciones(repeticiones) a partir de condiciones
+    while(anhoMundial <= limite){
+    //alert("Hubo mundial de FIFA en el año " + anhoMundial);
+    imprimir("Hubo mundial de FIFA en el año " + anhoMundial);
+    var anhoMundial=anhoMundial + 4;
+    }
+    imprimir("listo!");
+</script>

@@ -1,0 +1,27 @@
+<meta charset="UTF-8">
+<h1>Calcula puntos de un equipo de fuchibol</h1>
+<script>
+
+    function saltarLinea() {
+        document.write("<br><br>");
+    }
+    function imprimir(frase) {
+        document.write('<big>' + frase + '</big>');
+        saltarLinea();
+    }
+    var victorias = parseInt(prompt("cantidad de victorias: "));
+    var empates = prompt("cantidad de empates: ");//se guarda como String
+
+    puntosTotal=(victorias*3)+ parseInt(empates);//parseInt convierte un String en int/num
+    imprimir(`El total de puntos del equipo es: ${puntosTotal}`);
+    var nombre = parseInt(prompt("nombre: "));
+    imprimir(nombre);//regresará un NaN : Not a Number
+
+    /*var invitados = prompt(parseInt("Número de invitados"));
+    var vips = prompt(parseInt("Número de invitados VIP's"));
+
+    var total = invitados + vips;
+
+    imprimir("El total de invitados es " + total);*/
+
+</script>

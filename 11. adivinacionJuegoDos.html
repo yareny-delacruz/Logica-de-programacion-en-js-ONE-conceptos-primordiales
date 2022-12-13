@@ -1,0 +1,27 @@
+<meta charset="UTF-8">
+<h1>¡Juego de adivinación!</h1>
+<script>
+
+    function saltarLinea() {
+        document.write("<br><br>");
+    }
+    function imprimir(frase) {
+        document.write('<big>' + frase + '</big>');
+        saltarLinea();
+    }
+    var numeroPensado = Math.round(Math.random() * 10); 
+    alert(numeroPensado)  ;
+    var intentos = 3;
+    while (intentos > 0) {
+        var numeroPropuesto = parseInt(prompt("Teclea un número entre 0 y 10"));
+        if (numeroPensado == numeroPropuesto) {
+            alert(`acertó!!, le tomó ${(4)-intentos} intento/s`);
+            //intentos=0;
+            break; //para acabar con el programa
+        } else {
+            alert("Incorrecto!!");            
+            intentos--;
+        }
+    }
+    imprimir(`El número era: ${numeroPensado}`);
+</script>

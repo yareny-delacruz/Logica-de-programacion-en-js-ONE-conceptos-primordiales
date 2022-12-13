@@ -1,0 +1,35 @@
+<meta charset="UTF-8">
+<h1>Calcula Índice de Masa Corporal</h1>
+<script>
+
+    function saltarLinea() {
+        document.write("<br><br>");
+    }
+    function imprimir(frase) {
+        document.write('<big>' + frase + '</big>');
+        saltarLinea();
+    }
+    //función paraimc
+    function imcCal(peso, altura, nombre) {
+        return peso / (altura * altura);
+    }
+    nombreUser = prompt("su nombre, por favor: ");
+    pesoUser = prompt(nombreUser + " su peso: ");
+    alturaUser = prompt(nombreUser + " su altura: ");
+    imcCalculado=imcCal(pesoUser, alturaUser, nombreUser);
+    imprimir(`${nombreUser}, su imc de  es: ${imcCalculado}`);
+
+    if(imcCalculado < 18.5) {
+        imprimir("IMC bajo de lo recomendado");
+    }
+    if(imcCalculado >= 18.5 && imcCalculado < 25) {
+        imprimir("IMC normal");
+    }
+    if(imcCalculado >= 25 && imcCalculado < 30) {
+        imprimir("Su IMC indica sobrepeso");
+    }
+    if(imcCalculado >= 30) {
+        imprimir("IMC ALTO, indica obesidad");
+    }
+
+</script>
